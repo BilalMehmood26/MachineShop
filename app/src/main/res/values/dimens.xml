@@ -2,4 +2,5 @@
 <resources>
     <dimen name="textVeiw_page_title">30sp</dimen>
     <dimen name="textVeiw_page_MS">18sp</dimen>
+    <dimen name="parent_padding">16dp</dimen>
 </resources>
