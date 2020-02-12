@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".GenerateInvoice">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:titleTextColor="@color/colorWhite"
+            app:title="@string/invoice_generation"
+            android:id="@+id/invoice_generator_toolbar"
+             />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
@@ -20,7 +30,7 @@
             app:tabSelectedTextColor="@color/colorWhite"
             app:tabTextColor="@color/colorDarkGrey"
             app:tabIndicatorColor="@android:color/white"
-            app:tabMode="fixed"/>
+            app:tabMode="fixed" />
 
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -30,5 +40,20 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:borderWidth="0dp"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_send_black_24dp" />
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 

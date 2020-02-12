@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#FD5602</color>
     <color name="colorPrimaryDark">#eb5002</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="login_Activity_Color_Orange">#FD5602</color>
+    <color name="colorGrey">#d3d3d3</color>
+    <color name="colorDarkGrey">#A9A9A9</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorDashboard">#0000ff</color>
+    <color name="colorLightBlue">#1242ff</color>
+
 </resources>

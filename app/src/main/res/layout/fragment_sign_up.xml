@@ -5,7 +5,7 @@
     android:id="@+id/afterAnimationView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_Activity_Color_Orange"
+    android:background="@color/colorPrimary"
     android:padding="@dimen/parent_padding"
     >
     <ImageView
@@ -20,6 +20,7 @@
         android:id="@+id/WelcomeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/parent_padding"
         android:text="@string/register"
         android:layout_below="@+id/bookIconImageView"
         android:textColor="@color/colorWhite"
@@ -76,7 +77,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/signUp_btn"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginBottom="20dp"

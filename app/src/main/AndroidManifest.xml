@@ -9,6 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Dashboard"
+            android:theme="@style/Dashboard" ></activity>
+        <activity
+            android:name=".GenerateInvoice"
+            android:theme="@style/noActionBar"
+            android:parentActivityName=".Dashboard"/>
         <activity
             android:name=".SplashScreen"
             android:theme="@style/SplashScreen">
@@ -20,7 +26,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/SignupScreen" />
+            android:theme="@style/noActionBar" />
     </application>
 
 </manifest>

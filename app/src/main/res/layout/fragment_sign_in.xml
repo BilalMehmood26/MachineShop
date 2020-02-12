@@ -5,9 +5,9 @@
     android:id="@+id/afterAnimationView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/login_Activity_Color_Orange"
-    android:padding="@dimen/parent_padding"
-    >
+    android:background="@color/colorPrimary"
+    android:padding="@dimen/parent_padding">
+
     <ImageView
         android:id="@+id/bookIconImageView"
         android:layout_width="70dp"
@@ -20,8 +20,8 @@
         android:id="@+id/WelcomeTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/wellcome_greeting"
         android:layout_below="@+id/bookIconImageView"
+        android:text="@string/wellcome_greeting"
         android:textColor="@color/colorWhite"
         android:textSize="@dimen/textVeiw_page_title"
         android:textStyle="bold" />
@@ -38,26 +38,32 @@
             android:id="@+id/et_email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="@string/email"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:padding="15dp"
-            android:inputType="textEmailAddress"
             android:background="@drawable/et_custom"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
             android:textSize="15sp" />
 
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="@string/password"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="10dp"
-            android:padding="15dp"
-            android:inputType="textPassword"
-            android:background="@drawable/et_custom"
-            android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/et_custom"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textSize="15sp" />
+
 
 
     </LinearLayout>
@@ -66,34 +72,34 @@
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginBottom="20dp"
+        android:layout_above="@id/left_arrow"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="@string/signin"
-        android:layout_above="@id/left_arrow"
-        android:textAllCaps="false"
+        android:layout_marginBottom="20dp"
         android:background="@drawable/btn_custom"
+        android:text="@string/signin"
+        android:textAllCaps="false"
         android:textColor="@color/colorWhite"
         android:textSize="16sp" />
 
     <ImageView
+        android:id="@+id/left_arrow"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:id="@+id/left_arrow"
-        android:src="@drawable/ic_left_arrow"
         android:layout_above="@id/swipeRight"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/ic_left_arrow" />
 
     <TextView
         android:id="@+id/swipeRight"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/swipe_left_for_register"
-        android:textSize="16sp"
-        android:textColor="@color/colorWhite"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="@string/swipe_left_for_register"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp" />
 
 
 </RelativeLayout>
