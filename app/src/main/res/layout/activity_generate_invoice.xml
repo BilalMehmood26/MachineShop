@@ -19,6 +19,8 @@
             android:id="@+id/invoice_generator_toolbar"
              />
 
+
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
             android:layout_width="match_parent"

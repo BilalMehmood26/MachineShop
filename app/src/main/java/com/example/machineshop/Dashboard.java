@@ -1,7 +1,9 @@
 package com.example.machineshop;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
@@ -17,6 +19,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class Dashboard extends AppCompatActivity {
 
+    private DrawerLayout drawer;
     private FloatingActionButton fabInvoice;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
@@ -27,6 +30,13 @@ public class Dashboard extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar_dashboard);
         setSupportActionBar(toolbar);
+
+        //Drawer layout
+        drawer = findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.Navigation_drawer_open,
+                R.string.Navigation_drawer_close);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
 
         //Initialize TabLayout and ViewPager and its Resource Id
         mTabLayout = (TabLayout) findViewById(R.id.tab_layout);

@@ -7,7 +7,7 @@
     <string name="register">Registration</string>
 
     <string name="business_Name">Business Name</string>
-    <string name="email">Enter your email</string>
+    <string name="email">Your email</string>
     <string name="password">password</string>
     <string name="invoice_generation">Create Invoice</string>
     <string name="discount">Discount</string>
@@ -16,6 +16,9 @@
     <string name="total">Total</string>
     <string name="grandtotal">Grandtotal</string>
 
+    <!--Navigation -->
+    <string name="Navigation_drawer_open">Navigation Drawer Open</string>
+    <string name="Navigation_drawer_close">Navigation Drawer Close</string>
 
     <!--Drawer menu-->
     <string name="menu_services">Services</string>
@@ -24,12 +27,19 @@
     <string name="menu_share">Share</string>
     <string name="menu_about_us">About us</string>
 
-    <string name="swipe_left_for_register">Swipe left for Signup</string>
+    <string name="swipe_left_for_register"> </string>
     <string name="swipe_Right_for_register">Swipe right for Signin</string>
 
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="wellcome_greeting">Wellcome Back</string>
+    <string name="wellcome_greeting">Hello There, \nWellcome Back</string>
+    <string name="signin_continue">Signin to continue</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="All_invoice_frag">Your invoices will show up here. Click the plus button below to create
+    your first invoice!</string>
+    <string name="outstanding_frag">Invoices that are not yet paid show up here.</string>
+    <string name="paid_frag">Invoices that you mark paid will show up here.</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

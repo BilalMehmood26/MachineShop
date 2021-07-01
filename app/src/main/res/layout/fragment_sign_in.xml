@@ -5,89 +5,109 @@
     android:id="@+id/afterAnimationView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorLightGrey"
     android:padding="@dimen/parent_padding">
 
     <ImageView
         android:id="@+id/bookIconImageView"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
         android:layout_marginBottom="@dimen/parent_padding"
         android:contentDescription="@null"
         android:src="@drawable/ic_collections_bookmark_black_24dp" />
 
     <TextView
-        android:id="@+id/WelcomeTextView"
+        android:id="@+id/first_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/bookIconImageView"
         android:text="@string/wellcome_greeting"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorBlack"
         android:textSize="@dimen/textVeiw_page_title"
         android:textStyle="bold" />
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/second_heading"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/loginButton"
-        android:layout_below="@+id/WelcomeTextView"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_below="@+id/first_heading"
+        android:layout_marginBottom="@dimen/parent_padding"
+        android:text="@string/signin_continue"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp" />
 
-        <EditText
+    <LinearLayout
+        android:id="@+id/sub_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/second_heading"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/parent_padding"
+        android:paddingBottom="@dimen/parent_padding">
+
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/et_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/et_custom"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
             android:hint="@string/email"
-            android:inputType="textEmailAddress"
-            android:padding="15dp"
-            android:textSize="15sp" />
+            app:endIconMode="clear_text"
+            android:textSize="15sp">
 
-
-            <EditText
-                android:id="@+id/et_password"
+            <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:background="@drawable/et_custom"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:padding="10dp"
-                android:textSize="15sp" />
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:hint="@string/password"
+            android:textSize="15sp"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="@string/signin"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp" />
 
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_above="@id/left_arrow"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/btn_custom"
-        android:text="@string/signin"
-        android:textAllCaps="false"
-        android:textColor="@color/colorWhite"
-        android:textSize="16sp" />
+
 
     <ImageView
         android:id="@+id/left_arrow"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_above="@id/swipeRight"
+        android:layout_above="@+id/swipeRight"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:src="@drawable/ic_left_arrow" />
 
     <TextView
@@ -96,9 +116,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
         android:layout_marginBottom="20dp"
         android:text="@string/swipe_left_for_register"
-        android:textColor="@color/colorWhite"
+        android:textColor="@color/colorBlack"
         android:textSize="16sp" />
 
 

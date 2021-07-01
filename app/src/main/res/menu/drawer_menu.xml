@@ -1,15 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/home"
-        android:title="Home" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <item
-        android:id="@+id/invoice"
-        android:title="Invoice" />
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
 
+        <item
+            android:id="@+id/invoice"
+            android:icon="@drawable/ic_content_paste_black_24dp"
+            android:title="Invoice" />
+        <item
+            android:id="@+id/invoice_outstanding"
+            android:icon="@drawable/ic_drafts_black_24dp"
+            android:title="Outstanding" />
+    </group>
 
+    <item android:title="Communication">
+
+        <menu>
+            <item
+                android:id="@+id/share"
+                android:icon="@drawable/ic_share_black_24dp"
+                android:title="Share" />
+
+            <item
+                android:id="@+id/feedback"
+                android:icon="@drawable/ic_rss_feed_black_24dp"
+                android:title="Feedback" />
+
+        </menu>
+    </item>
 
 
 </menu>
